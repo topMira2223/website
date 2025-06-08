@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Mira2223.fun</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            padding: 0 24px;
+            height: 60px;
+            border-bottom: 1.5px solid #222;
+        }
+        .logo {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2.2rem;
+            color: #222;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            margin-right: 12px;
+        }
+        .nav-links a {
+            color: #1a3a3a;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #a9d8de88;
+        }
+
+        .about-section {
+            max-width: 700px;
+            margin: 60px auto 0 auto;
+            padding: 0 18px 32px 18px;
+            background: #f8fafb;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px 0 #0001;
+            font-family: 'Inter', Arial, sans-serif;
+            color: #222;
+            user-select: none;
+        }
+        .about-section h1 {
+            font-size: 2.3rem;
+            margin-bottom: 18px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .about-section h2 {
+            font-size: 1.3rem;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            color: #1a3a3a;
+        }
+        .about-section ul {
+            margin: 0 0 12px 0;
+            padding-left: 20px;
+        }
+        .about-section li {
+            margin-bottom: 6px;
+            font-size: 1.08rem;
+        }
+        .about-section p {
+            font-size: 1.13rem;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+        .skill-box {
+            background: #e6f7fa;
+            border: 1.5px solid #a9d8de;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px 0 #0001;
+            padding: 14px 18px 10px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 90px;
+            max-width: 110px;
+            transition: transform 0.15s, box-shadow 0.15s;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1.05rem;
+            color: #1a3a3a;
+            user-select: none;
+        }
+        .skill-box:hover {
+            transform: translateY(-4px) scale(1.06);
+            box-shadow: 0 4px 18px 0 #a9d8de88;
+            background: #d0f0f6;
+        }
+        .skill-icon {
+            width: 38px;
+            height: 38px;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 1px 2px #0001);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Mira2223.fun</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="about-section">
+    <h1>About Me</h1>
+    <p>Hello! My name is Mira and I enjoy creating simple projects for friends and fun. I love learning new things and experimenting with modern web technologies.</p>
+
+    <h2>Programming Languages</h2>
+    <div class="skills-row">
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">
+            <span>HTML5</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon">
+            <span>CSS3</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+            <span>JavaScript</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+            <span>Python</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon">
+            <span>C#</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="skill-icon">
+            <span>C</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-icon">
+            <span>C++</span>
+        </div>
+    </div>
+
+    <h2>Frameworks & Tools</h2>
+    <div class="skills-row">
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon">
+            <span>Node.js</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="skill-icon">
+            <span>Flask</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-icon">
+            <span>VS Code</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon">
+            <span>Docker</span>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="skill-icon">
+            <span>Bash</span>
+        </div>
+        <div class="skill-box" style="max-width: 150px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/DaVinci_Resolve_17_logo.svg" alt="DaVinci Resolve" class="skill-icon">
+            <span>DaVinci Resolve</span>
+        </div>
+    </div>
+
+    <h2>Languages I Speak</h2>
+    <ul>
+        <li>Czech (native)</li>
+        <li>English (advanced)</li>
+    </ul>
+
+    <h2>What I Like</h2>
+    <ul>
+        <li>Building useful and fun projects</li>
+        <li>Learning new programming languages</li>
+        <li>Spending time in nature</li>
+    </ul>
+</div>
+<script>
+    document.querySelectorAll('a').forEach(el => el.setAttribute('draggable', 'false'));
+</script>
+</body>
+</html>

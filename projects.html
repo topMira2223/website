@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Mira2223.fun</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            padding: 0 24px;
+            height: 60px;
+            border-bottom: 1.5px solid #222;
+        }
+        .logo {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2.2rem;
+            color: #222;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            margin-right: 12px;
+        }
+        .nav-links a {
+            color: #1a3a3a;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #a9d8de88;
+        }
+
+        .projects-section {
+            max-width: 1100px;
+            margin: 60px auto 0 auto;
+            padding: 0 16px;
+            text-align: center;
+        }
+        .projects-title {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #222;
+            letter-spacing: 1px;
+            user-select: none;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            justify-items: center;
+        }
+        .project-card {
+            background: #f8fafb;
+            border: 1.5px solid #a9d8de;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px 0 #0001;
+            padding: 32px 24px 24px 24px;
+            width: 100%;
+            max-width: 400px;
+            min-height: 180px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.2s, transform 0.2s;
+            user-select: none;
+        }
+        .project-card:hover {
+            box-shadow: 0 4px 24px 0 #a9d8de88;
+            transform: translateY(-4px) scale(1.02);
+        }
+        .project-card h2 {
+            margin: 0 0 12px 0;
+            font-size: 1.4rem;
+            color: #1a3a3a;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        .project-card p {
+            flex: 1;
+            margin: 0 0 18px 0;
+            color: #333;
+            font-size: 1.05rem;
+        }
+        .project-link {
+            align-self: flex-end;
+            background: #a9d8de;
+            color: #1a3a3a;
+            text-decoration: none;
+            padding: 8px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 1px 4px 0 #0001;
+        }
+        .project-link:hover {
+            background: #7fc3cb;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Mira2223.fun</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="projects-section">
+        <h1 class="projects-title">Projects</h1>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h2>Weather App</h2>
+                <p>Jednoduchá aplikace pro zjištění aktuálního počasí podle města.</p>
+                <a href="#" class="project-link">Zobrazit</a>
+            </div>
+            <div class="project-card">
+                <h2>Portfolio Website</h2>
+                <p>Osobní portfolio pro prezentaci projektů a dovedností.</p>
+                <a href="#" class="project-link">Zobrazit</a>
+            </div>
+            <div class="project-card">
+                <h2>To-Do List</h2>
+                <p>Správa úkolů s možností přidávání, mazání a označování jako hotové.</p>
+                <a href="#" class="project-link">Zobrazit</a>
+            </div>
+            <div class="project-card">
+                <h2>Simple Blog</h2>
+                <p>Blogovací platforma pro sdílení článků a komentářů.</p>
+                <a href="#" class="project-link">Zobrazit</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a').forEach(el => el.setAttribute('draggable', 'false'));
+    </script>
+</body>
+</html>
