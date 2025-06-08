@@ -1,276 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mira2223.fun</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Inter', Arial, sans-serif;
-            background: #fff;
-            color: #181818;
+            font-family: Arial, sans-serif;
         }
-        header {
+        .navbar {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 2rem 4vw 1rem 4vw;
-            border-bottom: 2px solid #e0e0e0;
+            justify-content: space-between;
+            background: #fff;
+            padding: 0 24px;
+            height: 60px;
+            border-bottom: 1.5px solid #222;
         }
         .logo {
             font-family: 'Amatic SC', cursive;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
+            color: #222;
             letter-spacing: 2px;
-            margin-right: 3rem;
+            text-decoration: none;
         }
-        nav {
+        .nav-links {
             display: flex;
-            align-items: center;
-            gap: 2rem;
+            gap: 24px;
+            margin-right: 12px;
         }
-        nav a {
-            color: #181818;
+        .nav-links a {
+            color: #222;
             text-decoration: none;
             font-size: 1.1rem;
-            position: relative;
-            padding-bottom: 2px;
+            transition: color 0.2s;
         }
-        nav a.active,
-        nav a:hover {
-            border-bottom: 2px solid #181818;
+        .nav-links a:hover {
+            color: #ffb347;
         }
-        .cart-icon {
-            font-size: 1.4rem;
-            margin-left: 1.5rem;
-            cursor: pointer;
-        }
-        .main-content {
+
+        .hero {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 3rem;
-            margin-top: 3rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            min-width: 320px;
-        }
-        .left h1 {
-            padding-top: 3.5rem;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin: 0 0 1.5rem 0;
-            line-height: 1.1;
-        }
-        .explore-btn {
-            margin-top: 1.5rem;
-            padding: 0.8rem 2.5rem;
-            font-size: 1.1rem;
-            border: 2px solid #181818;
-            border-radius: 2rem;
-            background: #fff;
-            color: #181818;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-        }
-        .explore-btn:hover {
-            background: #181818;
-            color: #fff;
-        }
-        .right {
-            flex: 1.2;
-            min-width: 350px;
-            position: relative;
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            max-width: 90%;
+            margin: 48px auto 0 auto;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
         }
-        .bg-img {
-            width: 100%;
-            max-width: 900px;
-            height: 600px;
-            background: url('grass.png') center/cover no-repeat;
-            border-radius: 2rem;
-            position: relative;
-        }
-        .quote {
-            position: absolute;
-            background: #a9d8de;
-            color: #181818;
-            padding: 1.1rem 1.7rem 1.1rem 1.7rem;
-            border-radius: 0.3rem;
-            font-size: 1.15rem;
-            max-width: 370px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.13);
-            font-weight: 500;
-            line-height: 1.4;
-            display: flex;
-            flex-direction: column;
-        }
-        .quote .quote-row {
-            display: flex;
-            align-items: flex-start;
-        }
-        .quote .quote-mark {
-            color: #181818;
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
-            margin-top: -0.2rem;
-            display: inline-block;
-            min-width: 1.2em;
-        }
-        .quote .author {
-            display: block;
-            margin-top: 0.8rem;
-            text-align: right;
-            color: #6c757d;
-            font-size: 1.05rem;
-            font-weight: 400;
-        }
-        .quote1 {
-            top: 45px;
-            left: 50px;
-            transform: rotate(-2.5deg);
-        }
-        .quote2 {
-            top: 250px;
-            right: 50px;
-            transform: rotate(3deg);
-        }
-        .quote3 {
-            bottom: 55px;
-            left: 35px;
-            transform: rotate(-1.5deg);
-        }
-        @media (max-width: 900px) {
-            .main-content {
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-            }
-            .right, .left {
-                min-width: 0;
-                width: 100%;
-            }
-            .bg-img {
-                max-width: 100%;
-                height: 250px;
-            }
-            .quote {
-                font-size: 1rem;
-                padding: 1rem 1.2rem 1rem 1.7rem;
-                max-width: 95%;
-            }
-        }
-        .footer-bar {
-            width: 100%;
-            background: #1d3557;
-            color: #fff;
-            padding: 2.2rem 0 2.2rem 0;
-            font-size: 1.15rem;
-            border-top: none;
-            margin-top: 0;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            z-index: 100;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding: 0 4vw;
-        }
-        .footer-block {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-        }
-        .footer-title {
+        .hero-text {
+            font-size: 4.5vw;
             font-weight: bold;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-            margin-bottom: 0.3rem;
+            color: #222;
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.2;
+            margin-right: 48px;
+            margin-top: -10vw;
         }
-        .footer-desc {
-            font-style: italic;
-            margin-bottom: 0.3rem;
+        .hero-img {
+            height: 30vw;
+            max-width: 100%;
+            width: auto;
+            border-radius: 50px;
+            box-shadow: 0 2px 8px 0 #0002;
+            margin-left: 32px;
+            display: block;
         }
-        .footer-copy {
-            font-size: 1.05rem;
-            opacity: 0.85;
+
+
+        .hero-img-wrapper {
+            position: relative;
+            display: inline-block;
         }
-        @media (max-width: 700px) {
-            .footer-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.3rem;
-            }
+
+        .info-box {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12vw;
+            min-width: 180px;
+            max-width: 90vw;
+            background: #a9d8de; /* světle modrozelená */
+            color: #222;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1.15vw;
+            font-weight: 500;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px 0 #0002;
+            padding: 14px 18px 8px 18px;
+            opacity: 0.97;
+            pointer-events: auto;
+            border: 1px solid #7fc3cb;
+            text-align: left;
+            line-height: 1.3;
+            height: 5vw;
         }
+        .info-author {
+            text-align: right;
+            font-size: 1vw;
+            font-weight: 400;
+            margin-top: 4px;
+            color: #222;
+            opacity: 0.8;
+        }
+        .info-box-1 {
+            width: 14vw;
+            left: 25%;
+            top: 10%; 
+            transform: translateX(-50%) rotate(-3deg);
+        }
+        .info-box-2 {
+            left: 65%;
+            top: 40%;
+            width: 16vw;
+            transform: translateX(-50%) rotate(2.5deg);
+        }
+        .info-box-3 {
+            left: 35%;
+            top: 71%; 
+            width: 16vw;
+            transform: translateX(-50%) rotate(-2deg);
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Mira2223.fun</div>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Gallery</a>
+    <nav class="navbar">
+        <a href="#" class="logo">Mira2223.fun</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
             <a href="#">Contact</a>
-        </nav>
-    </header>
-    <div class="main-content">
-        <div class="left">
-            <h1>Creating Simple,<br>Beautiful Projects</h1>
-            <button class="explore-btn">Explore</button>
         </div>
-        <div class="right">
-            <div class="bg-img">
-                <div class="quote quote1">
-                    <span class="quote-row">
-                        <span class="quote-mark">&#8220;</span>
-                        If you cringe at your old code, you're improving!
-                    </span>
-                    <span class="author">- Tsoding</span>
-                </div>
-                <div class="quote quote2">
-                    <span class="quote-row">
-                        <span class="quote-mark">&#8220;</span>
-                        If your code runs 24/7, you shouldn't.
-                    </span>
-                    <span class="author">- LiveOverflow</span>
-                </div>
-                <div class="quote quote3">
-                    <span class="quote-row">
-                        <span class="quote-mark">&#8220;</span>
-                        Great ideas grow offline. Go touch some grass.
-                    </span>
-                    <span class="author">- Tsoding</span>
-                </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            Creating Simple,<br>
+            Beautiful Projects
+        </div>
+        <div class="hero-img-wrapper">
+            <img src="grass.png" alt="Grass" class="hero-img">
+            <div class="info-box info-box-1">
+                &rdquo; If you cringe at your old code, you're improving!
+                <div class="info-author">- Tsoding</div>
+            </div>
+            <div class="info-box info-box-2">
+                &rdquo; If your code runs 24/7, you shouldn't.
+                <div class="info-author">- LiveOverflow</div>
+            </div>
+            <div class="info-box info-box-3">
+                &rdquo; Great ideas grow offline. Go touch some grass.
+                <div class="info-author">- Tsoding</div>
             </div>
         </div>
     </div>
 </body>
-<footer class="footer-bar" style="display: none;">
-    <div class="footer-content">
-        <div class="footer-block">
-            <div class="footer-title">Design</div>
-            <div class="footer-desc">Creating simple websites for friends and fun.</div>
-            <div class="footer-copy">&copy; 2025. All rights reserved.</div>
-        </div>
-    </div>
-</footer>
-
 </html>
