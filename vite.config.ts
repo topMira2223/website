@@ -1,5 +1,5 @@
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/repo-name/' : '/',
+  base: mode === 'production' ? '/website/' : '/',
   server: {
     host: "::",
     port: 8080,
